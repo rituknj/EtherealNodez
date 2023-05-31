@@ -52,7 +52,9 @@
 //     background: var(--greyLight-1) !important ;
 // }
 
-
+body{
+    background-color: black;
+}
 // --------------responsive----------------
 
 html {
@@ -149,7 +151,7 @@ html {
 
 
 .container-kws {
-    width: 90% !important;
+    width: 100% !important;
     margin: auto !important;
 }
 
@@ -188,7 +190,9 @@ font-family: 'Inter', sans-serif !important;
 }
 
 //--------------------margin-------------------------
-
+.b-o-1{
+    bottom: 1rem !important;
+}
 .ma-0 {
     margin: 0rem !important;
 }

@@ -11,8 +11,8 @@ import Modal from "react-bootstrap/Modal";
 import meta from "../Image/meta.png";
 import walletconnect from "../Svg/walletconnect.svg";
 import "animate.css";
-
-import logo from "../Image/nfe-logo.png";
+import logoname from '../Image/EtherealNodez.png'
+import logo from "../Image/logo.png";
 
 function Navbar() {
   const [show, setShow] = useState(false);
@@ -51,7 +51,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="  navbar12  d-f a-i-c j-c-s-b p-y-1">
+      <div className=" pa-2 navbar12  d-f a-i-c j-c-s-b p-y-1">
         <div className="">
           <ul className="l-s-t-n d-f a-i-c ">
             <li className="">
@@ -61,9 +61,10 @@ function Navbar() {
                 className="logo animate__animated animate__rubberBand"
               />
               
+              
             </li>
 
-            <li className="m-r-2 c-p  font-f m-q-b-d-n">EtherealNodez</li>
+            <li className="m-r-2 c-p f-s-1_5 c-w f-w-600 m-l-0_5 font-f m-q-b-d-n">EtherealNodez</li>
            {/*  <li className="m-r-2 c-p   m-q-b-d-n">
               <Dropdown>
                 <Dropdown.Toggle
@@ -112,9 +113,9 @@ function Navbar() {
                 </Dropdown.Menu>
               </Dropdown>
             </li> */}
-         <li className="m-l-2 c-pq ">
+        {/*  <li className="m-l-2 c-pq ">
             <span className="" onClick={() => toggleTheme()}>{theme === "dark-theme" ? "Light mode" : "Dark mode"}</span>
-            </li> 
+            </li>  */}
          {/*    <li className="m-l-2 c-pq ">
             
               <Button
@@ -135,7 +136,7 @@ function Navbar() {
             <li className="m-l-2 c-p  "><div className="circle"></div></li>
             <li className="m-l-1 c-p  ">
             
-          <div className="f-s-1 font-f f-w-600">0xa05...BA2c</div>
+          <div className="f-s-1 font-f c-w f-w-600">0xa05...BA2c</div>
             </li>
           </ul>
         </div>

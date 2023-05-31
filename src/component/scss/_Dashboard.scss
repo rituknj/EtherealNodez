@@ -1,0 +1,15 @@
+.dashboard{
+&__box{
+    width: 479px;
+height: 256px;
+
+background: #201F25;
+border-radius: 10px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+}
