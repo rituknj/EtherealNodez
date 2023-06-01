@@ -10,7 +10,8 @@ import node from "../Image/Node.png"
 import pending from "../Image/PendingVector.png"
 import history from "../Image/HistoryVector.png"
 import top from "../Image/TopVector.png"
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import {FaBars} from "react-icons/fa"
 
 
 
@@ -50,7 +51,7 @@ export default function SideNavbar() {
     <>
     <div className="">
     <div className="">
-    <div className=" side-bg">
+    <div className=" side-bg m-q-b-d-n">
       <div className="sidebar">
         <div className="sidebar__inner">
           <ul className="l-s-t-n t-d-n ">
@@ -89,7 +90,11 @@ export default function SideNavbar() {
           <label for="darkmode-toggle">
           <span className="" onClick={() => toggleTheme()}>{theme === "dark-theme" ? "Light mode" : "Dark mode"}</span>
           </label>
-          </li></ul>
+          </li>
+         <li>
+        
+         </li>
+          </ul>
           </div>
         </div>
       </div>

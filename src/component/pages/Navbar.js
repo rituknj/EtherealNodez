@@ -14,6 +14,15 @@ import "animate.css";
 import logoname from '../Image/EtherealNodez.png'
 import logo from "../Image/logo.png";
 
+import dashboard from "../Image/Dashboard.png"
+import wallet from "../Image/Wallet.png"
+import node from "../Image/Node.png"
+import pending from "../Image/PendingVector.png"
+import history from "../Image/HistoryVector.png"
+import top from "../Image/TopVector.png"
+import { Link, NavLink } from "react-router-dom";
+import {FaBars} from "react-icons/fa"
+
 function Navbar() {
   const [show, setShow] = useState(false);
 
@@ -51,7 +60,7 @@ function Navbar() {
 
   return (
     <>
-      <div className=" pa-2 navbar12  d-f a-i-c j-c-s-b p-y-1">
+      <div className=" pa-2  navbar12 d-f a-i-c j-c-s-b p-y-1">
         <div className="">
           <ul className="l-s-t-n d-f a-i-c ">
             <li className="">
@@ -64,7 +73,7 @@ function Navbar() {
               
             </li>
 
-            <li className="m-r-2 c-p f-s-1_5 c-w f-w-600 m-l-0_5 font-f m-q-b-d-n">EtherealNodez</li>
+            <li className="m-r-2 c-p f-s-1_5 c-w f-w-600 m-l-0_5 font-f">EtherealNodez</li>
            {/*  <li className="m-r-2 c-p   m-q-b-d-n">
               <Dropdown>
                 <Dropdown.Toggle
@@ -90,7 +99,7 @@ function Navbar() {
         </div>
         <div className=" c-p ">
           <ul className="l-s-t-n d-f a-i-c ">
-            <li className="m-l-2 c-p font-f  m-q-b-d-n"><button className="buttons" >Home</button></li>
+            <li className="m-l-2 c-p font-f  "><button className="buttons" >Home</button></li>
 
           {/*   <li className="m-l-2 c-p   m-q-b-d-n">
               <Dropdown>
@@ -126,12 +135,12 @@ function Navbar() {
                 Connect Wallet
               </Button>
             </li> */}
-             <li className="m-l-2 c-p   m-q-a-d-n ">
+          <li className="m-l-2 c-p   m-q-a-d-n ">
               {" "}
               <Button onClick={handleShow} className=" b-c-t c-i b-n pa-0">
                 <AiOutlineMenu />
               </Button>
-            </li>
+            </li> 
             
             <li className="m-l-2 c-p  "><div className="circle"></div></li>
             <li className="m-l-1 c-p  ">
@@ -144,44 +153,67 @@ function Navbar() {
 
       {/* ---------------mobile-navbar---------------------------------- */}
 
-      <Offcanvas show={show} onHide={handleClose} className="pa-1">
+      <Offcanvas show={show} onHide={handleClose} className="pa-1 side-bg">
         <Offcanvas.Header>
           <Offcanvas.Title>
             {" "}
             <div className="image-dog1">
               <a href="/" target="_blank">
-                <img src={logo} alt="" className="" />
+                <img src={logo} alt="" className="" /><span className="m-r-2 c-p f-s-1_5 c-b f-w-600 m-l-0_5 font-f">EtherealNodez</span>
               </a>
             </div>
           </Offcanvas.Title>
           <ImCross onClick={handleClose} color="black" />
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <ul className="l-s-t-n">
-            <li className="m-r-1 m-t-1 c-p">dummy</li>
-            <li className="m-r-1 m-t-1 c-p">dummy</li>
-            <li className="m-r-1 m-t-1 c-p">dummy</li>
-            <li className="m-r-1 m-t-1 c-p">
-              <Dropdown>
-                <Dropdown.Toggle
-                  variant="success"
-                  id="dropdown-basic"
-                  className="b-c-t c-i b-n"
-                >
-                  Dropdown Button
-                </Dropdown.Toggle>
-                <Dropdown.Menu className="pa-1">
-                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">
-                    Another action
-                  </Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">
-                    Something else
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
+        <div className="">
+      <div className="sidebar">
+        <div className="sidebar__inner">
+          <ul className="l-s-t-n t-d-n ">
+            <li className="pa-0_5 c-p m-t-1 sidebar__tabs ">
+              {/* <MdDashboard className="m-r-0_5 " /> */}
+              <img src={dashboard} alt="" className="m-r-1 "/>
+              <span className="font-f c-w f-w-600 p-t-0_5">Dashboard</span>
+            </li>
+            <NavLink to="/">
+            <li className="pa-0_5 c-p m-t-1 sidebar__tabs">
+              {/* <GiWallet className="m-r-0_5" /> */}
+              <img src={wallet} alt="" className="m-r-1"/>
+              <span className="font-f c-w f-w-600 p-t-0_5">Wallet</span>
+            </li></NavLink>
+            <li className="pa-0_5 c-p m-t-1 sidebar__tabs">
+            <img src={node} alt="" className="m-r-1"/>
+              <span className="font-f c-w f-w-600 p-t-0_5">Node</span>
+            </li>
+            <li className="pa-0_5 c-p m-t-1 sidebar__tabs">
+            <img src={pending} alt="" className="m-r-1"/>
+              <span className="font-f c-w f-w-600 p-t-0_5">Pending Withdrawal</span>
+            </li>
+            <li className="pa-0_5 c-p m-t-1 sidebar__tabs">
+            <img src={history} alt="" className="m-r-1"/>
+              <span className="font-f c-w f-w-600 p-t-0_5">History</span>
+            </li>
+            <li className="pa-0_5 c-p m-t-1 sidebar__tabs ">
+            <img src={top} alt="" className="m-r-1"/>
+              <span className="font-f c-w f-w-600 p-t-0_5">Top Earners</span>
             </li>
           </ul>
+          <div className="sidebar__bottom m-l-0 ps-a b-o-1">
+          <ul className="l-s-t-n">
+          <li>
+          <input type="checkbox" id="darkmode-toggle" value='dark mode'/>
+          <label for="darkmode-toggle">
+          <span className="" onClick={() => toggleTheme()}>{theme === "dark-theme" ? "Light mode" : "Dark mode"}</span>
+          </label>
+          </li>
+         <li>
+       
+         </li>
+          </ul>
+          </div>
+        </div>
+      </div>
+      </div>
         </Offcanvas.Body>
       </Offcanvas>
 
