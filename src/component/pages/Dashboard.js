@@ -2,11 +2,16 @@ import React from "react";
 import { Grid } from "@mui/material";
 import SideNavbar from "./SideNavbar";
 import Dropdown from "react-bootstrap/Dropdown";
-import { IoIosAddCircle } from "react-icons/io";
+import { IoIosAddCircle, IoIosAddCircleOutline } from "react-icons/io";
 import eyevector from "../Image/EyeVector.png";
 import Chart from "./Chart";
 import { GrAddCircle } from "react-icons/gr";
 import Datetabs from "./Dashboardfiles/Datetabs";
+import mini from "../Image/G1.png"
+import mini2 from "../Image/G2.png"
+import mini3 from "../Image/G3.png"
+import mini4 from "../Image/G4.png"
+
 
 export default function Dashboard() {
   return (
@@ -231,6 +236,29 @@ export default function Dashboard() {
               </div>
               </div>
             </div>
+          </div>
+          <div className="row m-t-2 ">
+          <div className="col-lg-8 col-md-8 col-sm-12 col-12 dashboard__box-total pa-2 ">
+          <div className="font-f f-s-2">Portfolio</div>
+          <div className="row m-t-1">
+          <div className="col-lg-3 col-md-3 col-sm-12 col-12"><div className="font-f">Name</div></div>
+          <div className="col-lg-3 col-md-3 col-sm-12 col-12"><div className="font-f">Asset</div></div>
+          <div className="col-lg-3 col-md-3 col-sm-12 col-12"><div className="font-f">Mining Rate 24hrs</div></div>
+          <div className="col-lg-3 col-md-3 col-sm-12 col-12"><div className="font-f">Earnings</div></div>
+          </div>
+          <div className="row">
+          <div className="col-lg-2 col-md-2 col-sm-2 col-2">
+          <div><span><img src={mini} alt=""/></span><span>Mini Node</span></div>
+          </div>
+          <div className="col-lg-2 col-md-2 col-sm-2 col-2"><div><span>2</span><span><IoIosAddCircleOutline/></span></div></div>
+          <div className="col-lg-2 col-md-2 col-sm-2 col-2"><div><span>0.002</span><span></span></div></div>
+          <div className="col-lg-2 col-md-2 col-sm-2 col-2"><div><span>2 REAL</span><span></span></div></div>
+          <div className="col-lg-2 col-md-2 col-sm-2 col-2"><div><span>$1,780.12</span><span>0.230</span><span>2REAL</span></div></div>
+
+          <div  className="col-lg-2 col-md-2 col-sm-2 col-2"><span><button>Details</button></span></div>
+          </div>
+          </div>
+          <div className="col-lg-4 col-md-4 col-sm-12 col-12"></div>
           </div>
         </Grid>
       </Grid>
