@@ -12,6 +12,7 @@ import mini from "../Image/G1.png";
 import mini2 from "../Image/G2.png";
 import mini3 from "../Image/G3.png";
 import mini4 from "../Image/G4.png";
+import Form from "react-bootstrap/Form";
 
 export default function Dashboard() {
   return (
@@ -276,16 +277,17 @@ export default function Dashboard() {
                 </div>
                 <div className="col-lg-2 col-md-2 col-sm-2 col-2">
                   <div>
-                    <span className="font-f f-s-0_8">0.002</span><span className="font-f f-s-0_8">2 REAL</span>
+                    <span className="font-f f-s-0_8">0.002</span>
+                    <span className="font-f f-s-0_8">2 REAL</span>
                     <span></span>
                   </div>
                 </div>
-               
+
                 <div className="col-lg-4 col-md-4 col-sm-3 col-3">
                   <div className="d-f f-r">
                     <span className="font-f f-s-0_8 m-r-0_5">$1,780.12</span>
                     <span>
-                      <FaExchangeAlt className="m-r-0_5 mini-node-icons"/>
+                      <FaExchangeAlt className="m-r-0_5 mini-node-icons" />
                     </span>
                     <span className="font-f f-s-0_8 m-r-0_5">0.230</span>
                     <span className="font-f f-s-0_8">2REAL</span>
@@ -299,7 +301,121 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-sm-12 col-12"></div>
+            <div className="col-lg-3 col-md-3 col-sm-12 col-12">
+              <div className="dashboard__box-total pa-1">
+                <div className="font-f f-s-1_3">Activate New Node</div>
+                <div className="row">
+                  <div className="col-2">
+                    <span>
+                      <img src={mini} alt="" className="" />
+                    </span>
+                  </div>
+                  <div className="col-8">
+                    {" "}
+                    <div className="font-f ">Mini Node</div>
+                  </div>
+                  <div className="col-2">
+                    <span className="f-r">
+                      {" "}
+                      <Form>
+                        {["radio"].map((type) => (
+                          <div key={`default-${type}`} className="mb-3">
+                            <Form.Check // prettier-ignore
+                              type={type}
+                              id={`default-${type}`}
+                              label={``}
+                            />
+                          </div>
+                        ))}
+                      </Form>
+                    </span>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-2">
+                    <span>
+                      <img src={mini} alt="" className="" />
+                    </span>
+                  </div>
+                  <div className="col-8">
+                    {" "}
+                    <div className="font-f ">Standard Node</div>
+                  </div>
+                  <div className="col-2">
+                    <span className="f-r">
+                      {" "}
+                      <Form>
+                        {["radio"].map((type) => (
+                          <div key={`default-${type}`} className="mb-3">
+                            <Form.Check // prettier-ignore
+                              type={type}
+                              id={`default-${type}`}
+                              label={``}
+                            />
+                          </div>
+                        ))}
+                      </Form>
+                    </span>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-2">
+                    <span>
+                      <img src={mini} alt="" className="" />
+                    </span>
+                  </div>
+                  <div className="col-8">
+                    {" "}
+                    <div className="font-f ">Heavy Node</div>
+                  </div>
+                  <div className="col-2">
+                    <span className="f-r">
+                      {" "}
+                      <Form>
+                        {["radio"].map((type) => (
+                          <div key={`default-${type}`} className="mb-3">
+                            <Form.Check // prettier-ignore
+                              type={type}
+                              id={`default-${type}`}
+                              label={``}
+                            />
+                          </div>
+                        ))}
+                      </Form>
+                    </span>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-2">
+                    <span>
+                      <img src={mini} alt="" className="" />
+                    </span>
+                  </div>
+                  <div className="col-8">
+                    {" "}
+                    <div className="font-f ">Master Node</div>
+                  </div>
+                  <div className="col-2">
+                    <span className="f-r">
+                      {" "}
+                      <Form>
+                        {["radio"].map((type) => (
+                          <div key={`default-${type}`} className="mb-3">
+                            <Form.Check // prettier-ignore
+                              type={type}
+                              id={`default-${type}`}
+                              label={``}
+                            />
+                          </div>
+                        ))}
+                      </Form>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div >
+            </div>
           </div>
         </Grid>
       </Grid>

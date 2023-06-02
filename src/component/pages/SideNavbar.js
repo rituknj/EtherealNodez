@@ -86,8 +86,8 @@ export default function SideNavbar() {
           <div className="sidebar__bottom m-l-0 ps-a b-o-1">
           <ul className="l-s-t-n">
           <li>
-          <input type="checkbox" id="darkmode-toggle" value='dark mode'/>
-          <label for="darkmode-toggle">
+          <input type="checkbox" id="darkmode-toggle" value='dark mode' className="input"/>
+          <label for="darkmode-toggle" className="label">
           <span className="" onClick={() => toggleTheme()}>{theme === "dark-theme" ? "Light mode" : "Dark mode"}</span>
           </label>
           </li>
