@@ -1470,7 +1470,9 @@ font-family: 'Inter', sans-serif !important;
 }
 
 //------------width----in--%------
-
+.w-15{
+    width: 15% !important;
+}
 .w-25 {
     width: 25% !important;
 }
@@ -1901,6 +1903,9 @@ a {
 
 .j-c-s-e {
     justify-content: space-evenly !important;
+}
+.j-c-e {
+    justify-content: end !important;
 }
 
 //-------------list---style--type----------------
