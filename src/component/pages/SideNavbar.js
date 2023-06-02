@@ -55,33 +55,38 @@ export default function SideNavbar() {
       <div className="sidebar">
         <div className="sidebar__inner">
           <ul className="l-s-t-n t-d-n ">
+          <NavLink to='/'>
             <li className="pa-0_5 c-p m-t-1 sidebar__tabs ">
               {/* <MdDashboard className="m-r-0_5 " /> */}
               <img src={dashboard} alt="" className="m-r-1 "/>
               <span className="font-f c-w f-w-600 p-t-0_5">Dashboard</span>
-            </li>
-            <NavLink to="/">
+            </li></NavLink>
+            <NavLink to="/wallet">
             <li className="pa-0_5 c-p m-t-1 sidebar__tabs">
               {/* <GiWallet className="m-r-0_5" /> */}
               <img src={wallet} alt="" className="m-r-1"/>
               <span className="font-f c-w f-w-600 p-t-0_5">Wallet</span>
             </li></NavLink>
+            <NavLink to="/">
             <li className="pa-0_5 c-p m-t-1 sidebar__tabs">
             <img src={node} alt="" className="m-r-1"/>
               <span className="font-f c-w f-w-600 p-t-0_5">Node</span>
-            </li>
+            </li></NavLink>
+            <NavLink to="/">
             <li className="pa-0_5 c-p m-t-1 sidebar__tabs">
             <img src={pending} alt="" className="m-r-1"/>
               <span className="font-f c-w f-w-600 p-t-0_5">Pending Withdrawal</span>
-            </li>
+            </li></NavLink>
+            <NavLink to="/">
             <li className="pa-0_5 c-p m-t-1 sidebar__tabs">
             <img src={history} alt="" className="m-r-1"/>
               <span className="font-f c-w f-w-600 p-t-0_5">History</span>
-            </li>
+            </li></NavLink>
+            <NavLink to="/">
             <li className="pa-0_5 c-p m-t-1 sidebar__tabs ">
             <img src={top} alt="" className="m-r-1"/>
               <span className="font-f c-w f-w-600 p-t-0_5">Top Earners</span>
-            </li>
+            </li></NavLink>
           </ul>
           <div className="sidebar__bottom m-l-0 ps-a b-o-1">
           <ul className="l-s-t-n">

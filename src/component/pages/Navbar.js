@@ -63,6 +63,7 @@ function Navbar() {
       <div className=" pa-2  navbar12 d-f a-i-c j-c-s-b p-y-1">
         <div className="">
           <ul className="l-s-t-n d-f a-i-c ">
+          <NavLink to="/">
             <li className="">
               <img
                 src={logo}
@@ -71,7 +72,7 @@ function Navbar() {
               />
               
               
-            </li>
+            </li></NavLink>
 
             <li className="m-r-2 c-p f-s-1_5 c-w f-w-600 m-l-0_5 font-f">EtherealNodez</li>
            {/*  <li className="m-r-2 c-p   m-q-b-d-n">
