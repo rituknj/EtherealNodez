@@ -242,74 +242,105 @@ export default function Dashboard() {
             </div>
           </div>
           <div className="row m-t-2 ">
-            <div className="col-lg-9 col-md-9 col-sm-12 col-12 ">
-            <div className="dashboard__box-total pa-2 ">
-              <div className="font-f f-s-2">Portfolio</div>
-              <div className="row m-t-1">
-                <div className="col-lg-2 col-md-3 col-sm-12 col-12">
-                  <div className="font-f">Name</div>
+            <div className="col-lg-9 col-md-9 col-sm-12 col-12 section-port">
+              <div className="dashboard__box-total pa-2 ">
+                <div className="font-f f-s-2">Portfolio</div>
+                <div className="row m-t-1">
+                  <div className="col-lg-2 col-md-2 col-sm-2 col-2">
+                    <div className="font-f">Name</div>
+                  </div>
+                  <div className="col-lg-2 col-md-2 col-sm-2 col-2">
+                    <div className="font-f">Asset</div>
+                  </div>
+                  <div className="col-lg-3 col-md-3 col-sm-3 col-2">
+                    <div className="font-f">Mining Rate 24hrs</div>
+                  </div>
+                  <div className="col-lg-3 col-md-3 col-sm-3 col-12">
+                    <div className="font-f">Earnings</div>
+                  </div>
                 </div>
-                <div className="col-lg-2 col-md-3 col-sm-12 col-12">
-                  <div className="font-f">Asset</div>
-                </div>
-                <div className="col-lg-3 col-md-3 col-sm-12 col-12">
-                  <div className="font-f">Mining Rate 24hrs</div>
-                </div>
-                <div className="col-lg-3 col-md-3 col-sm-12 col-12">
-                  <div className="font-f">Earnings</div>
+                <div className="row m-t-1">
+                  <div className="col-lg-2 col-md-2 col-sm-2 col-2">
+                    <div>
+                      <span className="m-r-0_5">
+                        <img src={mini} alt="" className="w-15" />
+                      </span>
+                      <span className="font-f f-s-0_8">Mini Node</span>
+                    </div>
+                  </div>
+                  <div className="col-lg-2 col-md-2 col-sm-2 col-2">
+                    <div className="d-f">
+                      <span className="font-f f-s-0_8 d-f a-i-c">2</span>
+                      <span className="m-l-0_5">
+                        <IoIosAddCircleOutline className="mini-node-icons  f-w-600" />
+                      </span>
+                    </div>
+                  </div>
+                  <div className="col-lg-2 col-md-2 col-sm-2 col-2">
+                    <div>
+                      <span className="font-f f-s-0_8">0.002</span>
+                      <span className="font-f f-s-0_8">2 REAL</span>
+                      <span></span>
+                    </div>
+                  </div>
+
+                  <div className="col-lg-4 col-md-4 col-sm-3 col-3">
+                    <div className="d-f f-r">
+                      <span className="font-f f-s-0_8 m-r-0_5">$1,780.12</span>
+                      <span>
+                        <FaExchangeAlt className="m-r-0_5 mini-node-icons-ex" />
+                      </span>
+                      <span className="font-f f-s-0_8 m-r-0_5">0.230</span>
+                      <span className="font-f f-s-0_8">2REAL</span>
+                    </div>
+                  </div>
+
+                  <div className="col-lg-2 col-md-2 col-sm-2 col-2">
+                    <span className="f-r">
+                      <button className="font-f f-s-0_8 detail">Details</button>
+                    </span>
+                  </div>
                 </div>
               </div>
-              <div className="row m-t-1">
-                <div className="col-lg-2 col-md-2 col-sm-2 col-2">
-                  <div>
-                    <span className="m-r-0_5">
-                      <img src={mini} alt="" className="w-15" />
-                    </span>
-                    <span className="font-f f-s-0_8">Mini Node</span>
+            </div>
+            <div className="col-lg-9 col-md-9 col-sm-12 col-12 section-port-two ">
+              <div className="section-dashboard pa-1">
+                <div className="d-f j-c-s-b">
+                  <div className="font-f f-s-1_5">Portfolio</div>
+                  <div className="tab-sec ">
+                    <span className="font-f">Earnings</span>
+                    <span className="font-f">Mining Rate</span>
                   </div>
                 </div>
-                <div className="col-lg-2 col-md-2 col-sm-2 col-2">
-                  <div className="d-f">
-                    <span className="font-f f-s-0_8 d-f a-i-c">2</span>
-                    <span className="m-l-0_5">
-                      <IoIosAddCircleOutline className="mini-node-icons  f-w-600" />
-                    </span>
+                <div className="row m-t-1">
+                  <div className="col-4">
+                    <div className="font-f f-s-1_3">
+                      <img src={mini} alt="" className="m-r-0_5 cir-img" />
+                      Mini Node
+                    </div>
                   </div>
-                </div>
-                <div className="col-lg-2 col-md-2 col-sm-2 col-2">
-                  <div>
-                    <span className="font-f f-s-0_8">0.002</span>
-                    <span className="font-f f-s-0_8">2 REAL</span>
-                    <span></span>
+                  <div className="col-2">
+                    <div>
+                      <span className="font-f f-s-1_3">2 </span>
+                      <span>
+                        <IoIosAddCircleOutline className="mini-node-icons m-l-0_5" />
+                      </span>
+                    </div>
                   </div>
-                </div>
-
-                <div className="col-lg-4 col-md-4 col-sm-3 col-3">
-                  <div className="d-f f-r">
-                    <span className="font-f f-s-0_8 m-r-0_5">$1,780.12</span>
-                    <span>
-                      <FaExchangeAlt className="m-r-0_5 mini-node-icons" />
-                    </span>
-                    <span className="font-f f-s-0_8 m-r-0_5">0.230</span>
-                    <span className="font-f f-s-0_8">2REAL</span>
+                  <div className="col-4">
+                  <div><div className="font-f f-s-1_3">$123.09</div><span className="font-f">0.004 2Real</span></div>
                   </div>
+                  <div className="col-2"><button className="detail font-f">Details</button></div>
                 </div>
-
-                <div className="col-lg-2 col-md-2 col-sm-2 col-2">
-                  <span className="f-r">
-                    <button className="font-f f-s-0_8 detail">Details</button>
-                  </span>
-                </div>
-              </div>
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-12 col-12">
               <div className="dashboard__box-total pa-1">
                 <div className="font-f f-s-1_3">Activate New Node</div>
-                <div className="row">
+                <div className="row m-t-1">
                   <div className="col-2">
                     <span>
-                      <img src={mini} alt="" className="" />
+                      <img src={mini} alt="" className="cir-img" />
                     </span>
                   </div>
                   <div className="col-8">
@@ -336,7 +367,7 @@ export default function Dashboard() {
                 <div className="row">
                   <div className="col-2">
                     <span>
-                      <img src={mini} alt="" className="" />
+                      <img src={mini} alt="" className="cir-img" />
                     </span>
                   </div>
                   <div className="col-8">
@@ -363,7 +394,7 @@ export default function Dashboard() {
                 <div className="row">
                   <div className="col-2">
                     <span>
-                      <img src={mini} alt="" className="" />
+                      <img src={mini} alt="" className="cir-img" />
                     </span>
                   </div>
                   <div className="col-8">
@@ -390,7 +421,7 @@ export default function Dashboard() {
                 <div className="row">
                   <div className="col-2">
                     <span>
-                      <img src={mini} alt="" className="" />
+                      <img src={mini} alt="" className="cir-img" />
                     </span>
                   </div>
                   <div className="col-8">
@@ -416,8 +447,7 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
-            <div >
-            </div>
+            <div></div>
           </div>
         </Grid>
       </Grid>
