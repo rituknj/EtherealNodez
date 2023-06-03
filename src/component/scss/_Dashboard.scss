@@ -88,7 +88,7 @@ border: 1px solid #b7c5f53b !important;
 }
 .mini-node-icons{
     background: transparent !important;
-    margin-top: -5px !important;
+    margin-top: 3px !important;
 }
 .detail{
     background: #6C728D ;
@@ -96,4 +96,10 @@ border: 1px solid #b7c5f53b !important;
     border: none;
     padding: 2px;
     border-radius: 5px;
+}
+
+@media screen and (max-width: 991px) {
+    .dashboard{
+        margin-top: 1rem;
+    }
 }

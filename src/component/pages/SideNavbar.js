@@ -67,12 +67,12 @@ export default function SideNavbar() {
               <img src={wallet} alt="" className="m-r-1"/>
               <span className="font-f c-w f-w-600 p-t-0_5">Wallet</span>
             </li></NavLink>
-            <NavLink to="/">
+            <NavLink to="/node">
             <li className="pa-0_5 c-p m-t-1 sidebar__tabs">
             <img src={node} alt="" className="m-r-1"/>
               <span className="font-f c-w f-w-600 p-t-0_5">Node</span>
             </li></NavLink>
-            <NavLink to="/">
+            <NavLink to="/pendingwithdrawal">
             <li className="pa-0_5 c-p m-t-1 sidebar__tabs">
             <img src={pending} alt="" className="m-r-1"/>
               <span className="font-f c-w f-w-600 p-t-0_5">Pending Withdrawal</span>
@@ -82,7 +82,7 @@ export default function SideNavbar() {
             <img src={history} alt="" className="m-r-1"/>
               <span className="font-f c-w f-w-600 p-t-0_5">History</span>
             </li></NavLink>
-            <NavLink to="/">
+            <NavLink to="/topearner">
             <li className="pa-0_5 c-p m-t-1 sidebar__tabs ">
             <img src={top} alt="" className="m-r-1"/>
               <span className="font-f c-w f-w-600 p-t-0_5">Top Earners</span>

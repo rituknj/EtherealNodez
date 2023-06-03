@@ -74,7 +74,7 @@ function Navbar() {
               
             </li></NavLink>
 
-            <li className="m-r-2 c-p f-s-1_5 c-w f-w-600 m-l-0_5 font-f">EtherealNodez</li>
+            <li className="m-r-2 c-p f-s-1_5 c-w f-w-600 m-l-0_5 font-f logoname">EtherealNodez</li>
            {/*  <li className="m-r-2 c-p   m-q-b-d-n">
               <Dropdown>
                 <Dropdown.Toggle

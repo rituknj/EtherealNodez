@@ -8,6 +8,9 @@ import Page404 from "./component/pages/Page404";
 import SideNavbar from "./component/pages/SideNavbar";
 import Dashboard from "./component/pages/Dashboard";
 import Wallet from "./component/pages/Wallet";
+import PendingWithdrwal from "./component/pages/PendingWithdrwal";
+import Node from "./component/pages/Node";
+import TopEarner from "./component/pages/TopEarner";
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
         <Routes>
       <Route path="/" element={<Dashboard />} />
       <Route path="/wallet" element={<Wallet/>} />
+      <Route path="/pendingwithdrawal" element={<PendingWithdrwal/>} />
+      <Route path="/node" element={<Node/>} />
+      <Route path='/topearner' element={<TopEarner/>} />
           {/*  <Route path="/form" element={<Form1 />} />
           <Route path="*" element={<Page404 />} /> */}
         </Routes>
