@@ -3,7 +3,7 @@
 //     width: 300px !important;
 // height: 200px !important;
 
-background: #201F25;
+background: var(--primary_bg);
 border-radius: 10px;
 
 /* Inside auto layout */
@@ -14,11 +14,11 @@ flex-grow: 0;
 }
 &__box-total{
    
-background: #201F25;
+background: var(--primary_bg);
 border-radius: 10px;
 }
 &__box-perfomance{
-    background: #201F25;
+    background: var(--primary_bg);
 border-radius: 10px;
 
 
@@ -102,7 +102,7 @@ border: 1px solid #b7c5f53b !important;
     border-radius: 5px;
 }
 .section-dashboard{
-    background: #201F25;
+    background: var(--primary_bg);
 border-radius: 10px;
 }
 .cir-img{

@@ -1,6 +1,6 @@
 .sidebar{
 
-    background-color: #161620;
+    background-color: var(--primary_bg);
     padding: 30px 20px;
     flex-shrink: 0;
     height: 100vh;
@@ -13,7 +13,7 @@
     flex-direction: column;
 }
     &__tabs{
-        background: #6C728D !important;
+        background: var(--second_bg) !important;
     border-radius: 10px !important;
     display: block;
     }
@@ -28,7 +28,7 @@
     top: 0;
 }
 .navbar12{
-    background: #161620 ;
+    background: var(--primary_bg) ;
 }
 
 /* Toggle-Button */
