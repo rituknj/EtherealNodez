@@ -3,12 +3,12 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'r
 
 const AreaChartComponent = () => {
   const data = [
-    { name: 'Label 1', data: 12 },
-    { name: 'Label 2', data: 19 },
+    { name: 'Label 1', data: 4 },
+    { name: 'Label 2', data: 2 },
     { name: 'Label 3', data: 3 },
-    { name: 'Label 4', data: 5 },
+    { name: 'Label 4', data: 3 },
     { name: 'Label 5', data: 2 },
-    { name: 'Label 6', data: 3 },
+    { name: 'Label 6', data: 1 },
   ];
 
   return (
