@@ -22,7 +22,8 @@ export default function Dashboard() {
         <Grid item xs={12} sm={12} md={12} lg={3} m-q-b-d-n>
           <SideNavbar />
         </Grid>
-        <Grid item xs={12} sm={12} md={12} lg={9}>
+        <Grid item xs={12} sm={12} md={12} lg={9} className="">
+          <div className="container-kws">
           <div className="row m-t-2">
             <div className="col-lg-4 col-md-6 col-sm-12 col-12">
               <div className="dashboard">
@@ -248,7 +249,7 @@ export default function Dashboard() {
               </div>
             </div>
           </div>
-          <div className="row m-t-2 ">
+          <div className="row m-t-2 m-b-4">
             <div className="col-lg-9 col-md-9 col-sm-12 col-12 section-port">
               <div className="dashboard__box-total pa-2 ">
                 <div className="font-f f-s-2">Portfolio</div>
@@ -455,7 +456,8 @@ export default function Dashboard() {
               </div>
             </div>
             <div></div>
-          </div>
+            </div>
+            </div>
         </Grid>
       </Grid>
     </div>

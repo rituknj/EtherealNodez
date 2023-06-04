@@ -12,7 +12,7 @@ const AreaChartComponent = () => {
   ];
 
   return (
-    <AreaChart width={500} height={300} data={data} className='b-c-t'>
+    <AreaChart width={320} height={200} data={data} className='b-c-t'>
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="name" />
       <YAxis />
