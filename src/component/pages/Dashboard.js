@@ -5,6 +5,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import { IoIosAddCircle, IoIosAddCircleOutline } from "react-icons/io";
 import { FaExchangeAlt } from "react-icons/fa";
 import eyevector from "../Image/EyeVector.png";
+import Donut_Chart from "./Donut_Chart";
 import Chart from "./Chart";
 import { GrAddCircle } from "react-icons/gr";
 import Datetabs from "./Dashboardfiles/Datetabs";
@@ -144,7 +145,12 @@ export default function Dashboard() {
                       <h4 className="font-f">Total Node</h4>
                     </div>
                     <div>
-                      <h1 className="font-f f-s-4 m-t-0_5">15</h1>
+                      <div className="d-f a-i-c">
+                        <div className="">
+                          <h1 className="font-f f-s-4 m-t-0_5">15</h1>
+                        </div>
+                    
+                        </div>
                     </div>
                     <div className="d-f m-t-5">
                       <GrAddCircle className="gr-icon" />
@@ -232,6 +238,7 @@ export default function Dashboard() {
             <div className="col-lg-8 col-md-8 col-sm-12 col-12">
               <div className="dashboard__box-perfomance pa-1">
                 <div className="font-f f-s-1_5">Performance</div>
+                <div className="m-t-3 b-c-t"><Donut_Chart/></div>
                 <div className="row">
                   <div className="col-8"></div>
                   <div className="col-4">
