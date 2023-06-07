@@ -8,12 +8,11 @@ import eyevector from "../Image/EyeVector.png";
 import Donut_Chart from "./Donut_Chart";
 import Chart from "./Chart";
 import { GrAddCircle } from "react-icons/gr";
-import Datetabs from "./Dashboardfiles/Datetabs";
+
 import mini from "../Image/G1.png";
-import mini2 from "../Image/G2.png";
-import mini3 from "../Image/G3.png";
-import mini4 from "../Image/G4.png";
+import Datetabs from "./Dashboardfiles/Datetabs";
 import Form from "react-bootstrap/Form";
+import Datetabs2 from "./Dashboardfiles/Datetabs2";
 
 export default function Dashboard() {
   return (
@@ -236,25 +235,25 @@ export default function Dashboard() {
                 </div>
               </div>
               <div className="col-lg-8 col-md-12 col-sm-12 col-12">
-                <div className="dashboard__box-perfomance pa-1">
-                  <div className="font-f f-s-1_5">Performance</div>
-                  <div className="m-t-3 b-c-t">
-                    <Donut_Chart />
-                  </div>
+                <div className="dashboard__box-perfomance pa-1 h-100">
                   <div className="row">
-                    <div className="col-8">
-                      <Datetabs />
-                      <div className="t-a-c">
-                        <div className="font-f f-s-1_3">Monthly</div>
-                        <div className="font-f m-t-0_5">$17,089.33</div>
-                        <div className="m-t-1 m-b-1"> <span className="m-l-0_5 tab f-w-600">
-                        <IoIosAddCircle className="icons-io m-r-0_3" />
-                        67.08%
-                      </span></div>
-                      <span className="font-f m-t-1">Your mining growth <br/>is 67% this month</span>
+                    <div className="col-lg-8 col-md-6 col-sm-6 col">
+                      <div className="font-f f-s-1_5">Performance</div>
+                      <div className="m-t-3 b-c-t">
+                        <Donut_Chart />
                       </div>
                     </div>
-                    <div className="col-"></div>
+                    <div className="col-lg-4 col-md-6 col-sm-6 col">
+                      <div className="m-q-b-d-n">
+                        <Datetabs />
+                      </div>
+                      <div className="m-q-b-d-n">
+                        <Datetabs2 />
+                      </div>
+                      <div className="t-a-c m-q-t-a-l">
+                        <div>Monthly</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
