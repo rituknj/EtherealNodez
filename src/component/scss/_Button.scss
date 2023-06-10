@@ -39,3 +39,52 @@ border-radius: 50px;
 background: #8A1367;
 border: 1px solid #269EE1;
 }
+
+#dropdown-basic {
+    margin: 0 !important;
+    padding: 5px !important;
+    border: none !important;
+}
+svg.recharts-surface{
+    background-color: transparent !important;
+}
+:where(.css-dev-only-do-not-override-k7429z).ant-tabs-top >.ant-tabs-nav::before, :where(.css-dev-only-do-not-override-k7429z).ant-tabs-bottom >.ant-tabs-nav::before, :where(.css-dev-only-do-not-override-k7429z).ant-tabs-top >div>.ant-tabs-nav::before, :where(.css-dev-only-do-not-override-k7429z).ant-tabs-bottom >div>.ant-tabs-nav::before{
+    border: none !important;
+}
+.ant-tabs-ink-bar.ant-tabs-ink-bar-animated{
+    background: transparent !important;
+}
+.ant-tabs-tab{
+    color: var(--color) !important;
+}
+.s-f-s-2{
+    font-size: 1.5rem !important;
+}
+@media screen and (max-width:1200px) {
+    .s-f-s-2{
+        font-size: 1.5rem !important;
+    }
+}
+@media screen and (max-width:900px) {
+    .s-f-s-2{
+        font-size: 1rem !important;
+    }
+}
+.s-f-s-3{
+    font-size:3rem !important;
+}
+@media screen and (max-width:1200px) {
+    .s-f-s-3{
+        font-size: 2rem !important;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .s-f-s-3{
+        font-size: 2rem !important;
+    }
+    .m-q-t-a-l{
+        text-align: left !important;
+    }
+}
+ 
