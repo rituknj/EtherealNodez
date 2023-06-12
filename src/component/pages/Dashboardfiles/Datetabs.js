@@ -1,4 +1,4 @@
-import { Tabs } from "antd";
+import {AiFillCalendar} from "react-icons/ai"
 import React from "react";
 
 export default function Datetabs() {
@@ -29,8 +29,13 @@ export default function Datetabs() {
   ];
   return (
     <div>
-      {" "}
-      <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+      <div className="d-f a-i-c font-f m-b-2 c-p"> 
+      <div className="m-l-0_5 font-f">Day </div>
+      <div className="m-l-0_5 font-f">Week </div>
+      <div className="m-l-0_5 font-f hightlight">Month</div>
+      <div className="m-l-0_5 font-f">Year</div>   
+      <div className="m-l-0_5 font-f"><AiFillCalendar/></div>
+      </div>
       
     </div>
   );

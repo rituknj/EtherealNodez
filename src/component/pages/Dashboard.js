@@ -1,28 +1,74 @@
-import React from "react";
+import React, { useLayoutEffect, useEffect, useState } from "react";
 import { Grid } from "@mui/material";
 import SideNavbar from "./SideNavbar";
 import Dropdown from "react-bootstrap/Dropdown";
 import { IoIosAddCircle, IoIosAddCircleOutline } from "react-icons/io";
-import { FaExchangeAlt } from "react-icons/fa";
+import { FaExchangeAlt, FaSun } from "react-icons/fa";
 import eyevector from "../Image/EyeVector.png";
 import Donut_Chart from "./Donut_Chart";
 import Chart from "./Chart";
 import { GrAddCircle } from "react-icons/gr";
-
+import { FaMoon } from "react-icons/fa";
 import mini from "../Image/G1.png";
 import Datetabs from "./Dashboardfiles/Datetabs";
 import Form from "react-bootstrap/Form";
 import Datetabs2 from "./Dashboardfiles/Datetabs2";
 
 export default function Dashboard() {
+  useLayoutEffect(() => {
+    const data = window.localStorage.getItem("theme");
+    if (data === "dark-theme") {
+      setTheme("dark-theme");
+    } else {
+      setTheme("light-theme");
+    }
+  }, []);
+
+  const [theme, setTheme] = useState("light-theme"); // Change the initial state value
+
+  const toggleThemelight = () => {
+    theme === "dark-theme" ? setTheme("light-theme") : setTheme("dark-theme");
+    window.localStorage.setItem(
+      "theme",
+      theme === "dark-theme" ? "light-theme" : "dark-theme"
+    );
+  };
+
+  const toggleThemedark = () => {
+    theme === "dark-theme" ? setTheme("dark-theme") : setTheme("dark-theme");
+    window.localStorage.setItem(
+      "theme",
+      theme === "dark-theme" ? "dark-theme" : "dark-theme"
+    );
+  };
+
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
+
   return (
     <div className="">
       <Grid container>
-        <Grid item xs={12} sm={12} md={12} lg={3} m-q-b-d-n>
+        <Grid item xs={12} sm={12} md={12} lg={3} className="bgs-primary m-q-b-d-n" >
           <SideNavbar />
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={9} className="">
           <div className="container-kws">
+            <div className="d-f j-c-s-b a-i-c m-t-2 m-q-a-d-n">
+              <div className="f-s-2 f-w-600 font-f">Dashboard</div>
+              <div className="">
+                {theme != "dark-theme" ? (
+                  <span onClick={() => toggleThemedark()} className="">
+                    {" "}
+                    <FaMoon className="f-s-1_5" />
+                  </span>
+                ) : (
+                  <span onClick={() => toggleThemelight()} className="">
+                    <FaSun className="f-s-1_5" />
+                  </span>
+                )}
+              </div>
+            </div>
             <div className="row m-t-2">
               <div className="col-lg-4 col-md-6 col-sm-12 col-12">
                 <div className="dashboard">
@@ -138,7 +184,7 @@ export default function Dashboard() {
             </div>
             <div className="row m-t-2">
               <div className="col-lg-4 col-md-12 col-sm-12 col-12">
-                <div className="dashboard__box-total pa-1">
+                <div className="dashboard__box-total pa-1 h-100">
                   <div className="row">
                     <div className="col-lg-6 col-md-6 col-sm-6 col-6">
                       <div>
@@ -150,10 +196,6 @@ export default function Dashboard() {
                             <h1 className="font-f f-s-4 m-t-0_5">15</h1>
                           </div>
                         </div>
-                      </div>
-                      <div className="d-f m-t-5">
-                        <GrAddCircle className="gr-icon" />
-                        <div className="m-l-0_5 font-f">Create New Node</div>
                       </div>
                     </div>
 
@@ -231,6 +273,10 @@ export default function Dashboard() {
                         </div>
                       </div>
                     </div>
+                    <div className="d-f m-t-2">
+                      <GrAddCircle className="gr-icon" />
+                      <div className="m-l-0_5 font-f">Create New Node</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -247,11 +293,22 @@ export default function Dashboard() {
                       <div className="m-q-b-d-n">
                         <Datetabs />
                       </div>
-                      <div className="m-q-b-d-n">
+                      <div className="m-q-a-d-n">
                         <Datetabs2 />
                       </div>
                       <div className="t-a-c m-q-t-a-l">
-                        <div>Monthly</div>
+                        <div className="font-f f-s-1_5">Monthly</div>
+                        <div className="font-f m-t-0_5">$17,089.33</div>
+                        <div className="m-t-1 m-b-1">
+                          <span className="d-i-b m-l-0_5 tab f-w-600">
+                            <IoIosAddCircle className="icons-io m-r-0_3 f-g" />
+                            67.08%
+                          </span>
+                        </div>
+                        <div className="font-f">
+                          Your mining growth <br />
+                          is 67% this month
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -360,9 +417,121 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-3 col-sm-12 col-12">
+              <div className="col-lg-3 col-md-12 col-sm-12 col-12">
                 <div className="dashboard__box-total pa-1">
                   <div className="font-f f-s-1_3">Activate New Node</div>
+                  <div className="row m-t-1">
+                    <div className="col-2">
+                      <span>
+                        <img src={mini} alt="" className="cir-img" />
+                      </span>
+                    </div>
+                    <div className="col-8">
+                      {" "}
+                      <div className="font-f ">Mini Node</div>
+                    </div>
+                    <div className="col-2">
+                      <span className="f-r">
+                        {" "}
+                        <Form>
+                          {["radio"].map((type) => (
+                            <div key={`default-${type}`} className="mb-3">
+                              <Form.Check // prettier-ignore
+                                type={type}
+                                id={`default-${type}`}
+                                label={``}
+                              />
+                            </div>
+                          ))}
+                        </Form>
+                      </span>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-2">
+                      <span>
+                        <img src={mini} alt="" className="cir-img" />
+                      </span>
+                    </div>
+                    <div className="col-8">
+                      {" "}
+                      <div className="font-f ">Standard Node</div>
+                    </div>
+                    <div className="col-2">
+                      <span className="f-r">
+                        {" "}
+                        <Form>
+                          {["radio"].map((type) => (
+                            <div key={`default-${type}`} className="mb-3">
+                              <Form.Check // prettier-ignore
+                                type={type}
+                                id={`default-${type}`}
+                                label={``}
+                              />
+                            </div>
+                          ))}
+                        </Form>
+                      </span>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-2">
+                      <span>
+                        <img src={mini} alt="" className="cir-img" />
+                      </span>
+                    </div>
+                    <div className="col-8">
+                      {" "}
+                      <div className="font-f ">Heavy Node</div>
+                    </div>
+                    <div className="col-2">
+                      <span className="f-r">
+                        {" "}
+                        <Form>
+                          {["radio"].map((type) => (
+                            <div key={`default-${type}`} className="mb-3">
+                              <Form.Check // prettier-ignore
+                                type={type}
+                                id={`default-${type}`}
+                                label={``}
+                              />
+                            </div>
+                          ))}
+                        </Form>
+                      </span>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-2">
+                      <span>
+                        <img src={mini} alt="" className="cir-img" />
+                      </span>
+                    </div>
+                    <div className="col-8">
+                      {" "}
+                      <div className="font-f ">Master Node</div>
+                    </div>
+                    <div className="col-2">
+                      <span className="f-r">
+                        {" "}
+                        <Form>
+                          {["radio"].map((type) => (
+                            <div key={`default-${type}`} className="mb-3">
+                              <Form.Check // prettier-ignore
+                                type={type}
+                                id={`default-${type}`}
+                                label={``}
+                              />
+                            </div>
+                          ))}
+                        </Form>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="dashboard__box-total pa-1 m-t-2 m-b-4">
+                  <div className="font-f f-s-1_3">Top Earner</div>
                   <div className="row m-t-1">
                     <div className="col-2">
                       <span>

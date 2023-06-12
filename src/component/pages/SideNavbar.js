@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useLayoutEffect } from "react";
 import { MdDashboard, MdPendingActions } from "react-icons/md";
 import { GiWallet, GiSpawnNode } from "react-icons/gi";
-import { BiHistory } from "react-icons/bi";
-import { FcPositiveDynamic } from "react-icons/fc";
+import { FaHistory, FaMoon, FaSun } from "react-icons/fa";
+import { IoIosPodium } from "react-icons/io";
 import moon from "../Svg/moon-svgrepo-com.svg";
 import dashboard from "../Image/Dashboard.png";
 import wallet from "../Image/Wallet.png";
-import node from "../Image/Node.png";
+import {TbBrandPrisma} from "react-icons/tb"
 import pending from "../Image/PendingVector.png";
 import history from "../Image/HistoryVector.png";
 import top from "../Image/TopVector.png";
@@ -64,47 +64,49 @@ export default function SideNavbar() {
             <div className="sidebar">
               <div className="sidebar__inner">
                 <ul className="l-s-t-n t-d-n ">
-                  <NavLink to="/">
-                    <li className="pa-0_5 c-p m-t-1 sidebar__tabs ">
-                      {/* <MdDashboard className="m-r-0_5 " /> */}
-                      <img src={dashboard} alt="" className="m-r-1 " />
+                  <NavLink className="nav_link" to="/">
+                    <li className="p-y-0_5 p-x-1_5 c-p m-t-1 sidebar__tabs ">
+                    
+
+                    <MdDashboard className="m-r-0_5 b-c-t" />
+                      
                       <span className="font-f  f-w-600 p-t-0_5">
                         Dashboard
                       </span>
                     </li>
                   </NavLink>
-                  <NavLink to="/wallet">
+                  <NavLink className="nav_link" to="/wallet">
                     <li className="pa-0_5 c-p m-t-1 sidebar__tabs">
-                      {/* <GiWallet className="m-r-0_5" /> */}
-                      <img src={wallet} alt="" className="m-r-1" />
+                      <GiWallet className="m-r-0_5 b-c-t" /> 
+                      
                       <span className="font-f  f-w-600 p-t-0_5">Wallet</span>
                     </li>
                   </NavLink>
-                  <NavLink to="/node">
+                  <NavLink className="nav_link" to="/node">
                     <li className="pa-0_5 c-p m-t-1 sidebar__tabs">
-                      <img src={node} alt="" className="m-r-1" />
+                     <TbBrandPrisma className="m-r-0_5 b-c-t"/>
                       <span className="font-f  f-w-600 p-t-0_5">Node</span>
                     </li>
                   </NavLink>
-                  <NavLink to="/pendingwithdrawal">
+                  <NavLink className="nav_link" to="/pendingwithdrawal">
                     <li className="pa-0_5 c-p m-t-1 sidebar__tabs">
-                      <img src={pending} alt="" className="m-r-1" />
+                      <MdPendingActions className="m-r-0_5 b-c-t"/>
                       <span className="font-f  f-w-600 p-t-0_5">
                         Pending Withdrawal
                       </span>
                     </li>
                   </NavLink>
-                  <NavLink to="/">
+                  <NavLink >
                     <li className="pa-0_5 c-p m-t-1 sidebar__tabs">
-                      <img src={history} alt="" className="m-r-1" />
+                      <FaHistory className="m-r-0_5 b-c-t"/>
                       <span className="font-f  f-w-600 p-t-0_5">
                         History
                       </span>
                     </li>
                   </NavLink>
-                  <NavLink to="/topearner">
+                  <NavLink className="nav_link" to="/topearner">
                     <li className="pa-0_5 c-p m-t-1 sidebar__tabs ">
-                      <img src={top} alt="" className="m-r-1" />
+                      <IoIosPodium className="m-r-0_5 b-c-t"/>
                       <span className="font-f  f-w-600 p-t-0_5">
                         Top Earners
                       </span>
@@ -115,29 +117,14 @@ export default function SideNavbar() {
                   <ul className="l-s-t-n">
                     <li>
                       {theme != "dark-theme" ? (
-                        <span onClick={() => toggleThemedark()} className="">
-                          light theme
-                         {/*  <input
-                            type="checkbox"
-                            id="darkmode-toggle"
-                            value="dark mode"
-                            className="input"
-                          />
-                         */}
+                        <span onClick={() => toggleThemedark()} className="font-f c-p">
+                         <FaMoon className="f-s-1 b-c-t"/> Light Theme
+                         
                         </span>
                       ) : (
-                          <span onClick={() => toggleThemelight()} className="">
-                            dark theme
-                         {/*  <input
-                            type="checkbox"
-                            id="darkmode-toggle"
-                            value="dark mode"
-                            className="input"
-                          />
-                          <label
-                            for="darkmode-toggle"
-                            className="label"
-                          ></label> */}
+                          <span onClick={() => toggleThemelight()} className="font-f c-p">
+                         <FaSun className="f-s-1 b-c-t"/>   Dark Theme
+                         
                         </span>
                       )}
                     </li>
